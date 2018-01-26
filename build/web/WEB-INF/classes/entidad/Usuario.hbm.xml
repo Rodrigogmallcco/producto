@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26/01/2018 12:02:55 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entidad.Usuario" table="usuario" catalog="productos" optimistic-lock="version">
+        <id name="idUsuario" type="int">
+            <column name="idUsuario" />
+            <generator class="assigned" />
+        </id>
+        <property name="id" type="string">
+            <column name="id" length="45" />
+        </property>
+        <property name="pass" type="string">
+            <column name="pass" length="45" />
+        </property>
+        <property name="rolIdRol" type="int">
+            <column name="Rol_idRol" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
